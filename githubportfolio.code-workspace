@@ -7,5 +7,7 @@
 			"path": "..\\..\\airbnb"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "cheryltky.github.io"
+	}
 }
