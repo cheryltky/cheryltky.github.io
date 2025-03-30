@@ -4950,5 +4950,27 @@ input, select, textarea {
 			box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
 			visibility: visible;
 		}
+/* Custom image handling for portfolio tiles */
+#main > .posts article .image.fit {
+    overflow: hidden;
+    position: relative;
+    margin: 0 0 2em 0;
+    border-radius: 0.35em;
+}
 
+#main > .posts article .image.fit img {
+    width: 100%;
+    height: 250px; /* Fixed height for all project images */
+    object-fit: cover; /* maintains aspect ratio */
+    object-position: center; 
+    transition: transform 0.3s ease;
+}
+
+/* Featured image at the top */
+.post.featured .image.main img {
+    width: 100%;
+    height: 400px; 
+    object-fit: cover;
+    object-position: center;
+}
 	}
