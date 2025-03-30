@@ -4974,6 +4974,14 @@ input, select, textarea {
        object-fit: cover;
        object-position: center;
        transition: transform 0.3s ease;
+/* Fix for elongated images */
+  #main > .posts article.classification-project .image.fit img {
+      object-fit: cover !important;
+      object-position: center top !important; /* Show the top part */
+      height: 300px !important; /* Fixed height */
+      max-height: 300px !important;
+}
+	}
    }
 
    /* Make the text areas equal height */
