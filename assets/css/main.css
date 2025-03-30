@@ -4973,4 +4973,24 @@ input, select, textarea {
     object-fit: cover;
     object-position: center;
 }
+/* Make project cards consistent height */
+#main > .posts article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#main > .posts article header {
+  flex: 0 0 auto;
+}
+
+#main > .posts article p {
+  flex: 1 0 auto;
+  min-height: 6em; /* Adjust this value as needed */
+}
+
+#main > .posts article .actions {
+  flex: 0 0 auto;
+  margin-top: auto;
+}
 	}
