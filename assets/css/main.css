@@ -4998,4 +4998,10 @@ input, select, textarea {
        object-fit: cover;
        object-position: center;
    }
+/* Specific adjustments for problematic images */
+#main > .posts article.bikeshare-project .image.fit img,
+#main > .posts article.classification-project .image.fit img {
+    object-position: top; /* Show the top part of the image */
+    max-height: 300px; /* Match the container height */
+}
 	}
