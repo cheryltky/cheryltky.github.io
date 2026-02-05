@@ -1,144 +1,37 @@
-/* McKinsey-Inspired Portfolio Styling */
-/* Custom styling for cheryltky.github.io */
-/* Fixed version - removes problematic fixed heights */
+/* McKinsey-Inspired Portfolio Styling - WORKING VERSION */
+/* Adds rounded corners and clean shadows without breaking layout */
 
-/* Posts Grid - Modern Tile Layout */
-.posts {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-    gap: 2rem !important;
-    margin-bottom: 3rem !important;
-}
-
-/* Individual Article/Project Tiles */
+/* Individual Project Cards - Add rounded corners and shadow */
 .posts article {
-    background: #ffffff !important;
-    border-radius: 16px !important;
+    border-radius: 12px !important;
     overflow: hidden !important;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
     transition: all 0.3s ease !important;
-    border: none !important;
-    margin: 0 !important;
+    background: #ffffff !important;
 }
 
 .posts article:hover {
-    transform: translateY(-4px) !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-2px) !important;
 }
 
-/* Image Container - NO FIXED HEIGHT */
-.posts article .image {
-    border-radius: 0 !important;
-    margin: 0 !important;
-    overflow: hidden !important;
-    /* Removed fixed height to preserve layout */
-}
+/* Keep the original flexbox layout - DO NOT change to grid */
+/* The HTML5 UP template uses flexbox and it works well */
 
-.posts article .image img {
-    border-radius: 0 !important;
-    width: 100% !important;
-    /* Removed height and object-fit to let images display naturally */
-    transition: transform 0.3s ease !important;
-    display: block !important;
-}
-
-.posts article:hover .image img {
-    transform: scale(1.05) !important;
-}
-
-/* Content Area Styling */
-.posts article header {
-    padding: 1.5rem 1.5rem 0.5rem !important;
-    background: #ffffff !important;
-}
-
-.posts article header h3 {
-    font-size: 1.1rem !important;
-    line-height: 1.4 !important;
-    margin-bottom: 0.5rem !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-}
-
-.posts article p {
-    padding: 0 1.5rem !important;
-    color: #666666 !important;
-    font-size: 0.9rem !important;
-    line-height: 1.6 !important;
-    margin-bottom: 1rem !important;
-}
-
-/* Button Styling - McKinsey Inspired */
-.posts article .actions {
-    padding: 0 1.5rem 1.5rem !important;
-}
-
-.posts article .button {
-    background: transparent !important;
-    border: 2px solid #1a1a1a !important;
-    color: #1a1a1a !important;
-    border-radius: 8px !important;
-    padding: 0.6rem 1.2rem !important;
-    font-size: 0.85rem !important;
-    font-weight: 600 !important;
-    text-transform: none !important;
-    transition: all 0.3s ease !important;
-}
-
-.posts article .button:hover {
-    background: #1a1a1a !important;
-    color: #ffffff !important;
-}
-
-/* Featured Post Styling */
-.post.featured {
-    background: #ffffff !important;
-    border-radius: 20px !important;
-    overflow: hidden !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
-    margin-bottom: 3rem !important;
-    padding: 0 !important;
-}
-
-.post.featured .image.main {
-    border-radius: 0 !important;
-    /* Removed fixed height */
-    overflow: hidden !important;
-}
-
-.post.featured .image.main img {
-    /* Removed fixed height and object-fit */
-    width: 100% !important;
-    display: block !important;
-    border-radius: 0 !important;
-}
-
-.post.featured header.major {
-    padding: 2rem !important;
-    background: #ffffff !important;
-}
-
-.post.featured .actions {
-    padding: 0 2rem 2rem !important;
-}
-
-/* Background Color Adjustment */
+/* Background styling */
 #main {
-    background: #f8f9fa !important;
-    padding: 3rem 0 !important;
+    background: #f5f5f5 !important;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 980px) {
-    .posts {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
-        gap: 1.5rem !important;
-    }
+/* Button styling - cleaner look */
+.posts article .button {
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
 }
 
-@media screen and (max-width: 736px) {
-    .posts {
-        grid-template-columns: 1fr !important;
-        gap: 1.5rem !important;
-    }
+/* Featured post rounded corners */
+.post.featured {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
 }
