@@ -1,0 +1,157 @@
+/* McKinsey-Inspired Portfolio Styling */
+/* Custom styling for cheryltky.github.io */
+
+/* Posts Grid - Modern Tile Layout */
+.posts {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 2rem !important;
+    margin-bottom: 3rem !important;
+}
+
+/* Individual Article/Project Tiles */
+.posts article {
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    margin: 0 !important;
+}
+
+.posts article:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Image Container with Rounded Corners */
+.posts article .image {
+    border-radius: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    height: 240px !important;
+}
+
+.posts article .image img {
+    border-radius: 0 !important;
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+    transition: transform 0.3s ease !important;
+}
+
+.posts article:hover .image img {
+    transform: scale(1.05) !important;
+}
+
+/* Content Area Styling */
+.posts article header {
+    padding: 1.5rem 1.5rem 0 !important;
+    background: #ffffff !important;
+}
+
+.posts article header h3 {
+    font-size: 1.2rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.75rem !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+}
+
+.posts article p {
+    padding: 0 1.5rem !important;
+    color: #666666 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Button Styling - McKinsey Inspired */
+.posts article .actions {
+    padding: 0 1.5rem 1.5rem !important;
+}
+
+.posts article .button {
+    background: transparent !important;
+    border: 2px solid #1a1a1a !important;
+    color: #1a1a1a !important;
+    border-radius: 8px !important;
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.posts article .button:hover {
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+    transform: translateX(2px) !important;
+}
+
+/* Featured Post Styling */
+.post.featured {
+    background: #ffffff !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    margin-bottom: 3rem !important;
+    padding: 0 !important;
+}
+
+.post.featured .image.main {
+    border-radius: 0 !important;
+    height: 400px !important;
+    overflow: hidden !important;
+}
+
+.post.featured .image.main img {
+    object-fit: cover !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+}
+
+.post.featured header.major {
+    padding: 2rem !important;
+    background: #ffffff !important;
+}
+
+.post.featured .actions {
+    padding: 0 2rem 2rem !important;
+}
+
+/* Background Color Adjustment */
+#main {
+    background: #f8f9fa !important;
+    padding: 3rem 0 !important;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 980px) {
+    .posts {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+        gap: 1.5rem !important;
+    }
+    
+    .posts article .image {
+        height: 200px !important;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .posts {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+}
+
+/* Clean, Modern Typography */
+body {
+    font-family: "Merriweather", Georgia, serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather", Georgia, serif !important;
+    font-weight: 700 !important;
+}
