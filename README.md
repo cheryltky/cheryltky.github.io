@@ -75,7 +75,7 @@ cheryltky.github.io/
 │   └── webfonts/
 ├── images/             # Project and site imagery
 ├── files/
-│   └── Cheryl_DataAnalyst_CV_2025.pdf
+│   └── Cheryl_DataAnalyst_CV_2026.pdf
 ├── LICENSE.txt
 └── README.md
 ```
