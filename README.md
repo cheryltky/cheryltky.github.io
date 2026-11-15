@@ -2,7 +2,7 @@
 
 # Hi, I'm Cheryl
 
-### Data Analyst | Blending analytics and machine learning to drive decisions
+### Senior Data and Insights Analyst | Lifecycle marketing analytics, predictive modelling and dashboards
 
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=6A5ACD&center=true&vCenter=true&width=500&lines=SQL+%7C+Python+%7C+Excel;Tableau+%7C+Power+BI;Turning+data+into+decisions)
 
@@ -16,10 +16,8 @@
 
 ## About this repo
 
-This repository powers my personal data analytics portfolio, live at
-**[cheryltky.github.io](https://cheryltky.github.io)** — a showcase of projects across SQL,
-Python, Excel, Tableau and Power BI, blending data analytics and machine learning to help
-communities and individuals make data-driven decisions.
+This repository powers my portfolio, live at **[cheryltky.github.io](https://cheryltky.github.io)**:
+an About page, a gallery of projects, an impact-led CV and my research and writing.
 
 ## Contents
 
@@ -42,46 +40,31 @@ communities and individuals make data-driven decisions.
 
 ## Featured projects
 
-| Project | Description | Tools | Link |
-|---|---|---|---|
-| **Nudibranch Species ID App** (2025) | Community science app for identifying nudibranch species | — | [View](https://www.unidive.org/unidive-projects/meam/) |
-| **COVID-19 Twitter Sentiment Analysis** | Sentiment analysis on live-streamed tweets by hashtag and keyword | Python, Twitter API | [Notebook](https://github.com/cheryltky/TwitterSentimentAnalysis) |
-| **COVID-19 Dashboard** | Live case and death tracking via web APIs | Tableau, Python | [Dashboard](https://public.tableau.com/profile/cheryltky#!/vizhome/Covid-19Dashboard_16184790425750/Dashboard1) |
-| **US BikeShare Companies** | Customer trend analysis on bikeshare data | PostgreSQL, Python | [Notebook](https://htmlpreview.github.io/?https://raw.githubusercontent.com/cheryltky/bikeshare_studies/main/README.html) |
-| **City of Melbourne: Parking Bays** | Recommendations to reduce under-used parking and boost green space | Tableau | [Dashboard](https://public.tableau.com/profile/cheryltky#!/vizhome/OptimisingCityofMelbournesParkingSpaces/Dashboard1) |
-| **Image Classification Model Deployment** | Image classifier trained and deployed as a web app | Python, Flask, PyTorch | [Notebook](https://htmlpreview.github.io/?https://raw.githubusercontent.com/cheryltky/Image_Classification/master/README.html) |
-| **Market Basket Analysis** | Association-rule mining to optimise cross-selling | Python, Apriori | [Notebook](https://github.com/cheryltky/market_basket_analysis/blob/main/Market%20Basket%20Analysis%20.ipynb) |
-| **Viral Transmission in Prawns** | GAV transmission pathways and aquaculture implications | Research | [Infographic](https://drive.google.com/file/d/1T3T8LjjOwd3_S1gvJHXSW3BcGajDfQEa/view) |
-| **Invertebrates of the Coral Sea** | Species diversity study at Heron Island | Research | [Webpage](https://www.gbri.org.au/SpeciesList/Pseudobicerosbedfordi%7CKayYinTan.aspx?PageContentID=3856) |
+| Project | What it shows | Link |
+|---|---|---|
+| Nudibranch species identification | Computer vision with honest calibration, live app | [Repo](https://github.com/cheryltky/nudibranch-id) |
+| Skin lesion classification | Computer vision for healthcare, clinically framed evaluation | [Repo](https://github.com/cheryltky/skin-lesion-id) |
+| Market basket analysis | Customer purchase behaviour for cross-selling | [Repo](https://github.com/cheryltky/market_basket_analysis) |
+| Customer segmentation | PCA and k-means customer groups | [Repo](https://github.com/cheryltky/ML-for-Customer-Market-Segmentations) |
 
-<details>
-<summary>More projects brewing</summary>
-<br>
-New projects are added regularly — check the live site for the latest.
-</details>
+The full list is on the [Projects page](https://cheryltky.github.io/#projects).
 
 ## Repository structure
 
 ```
 cheryltky.github.io/
-├── index.html          # Projects, page 1
-├── indexpg2.html       # Projects, page 2
-├── cv.html             # CV (embedded PDF)
-├── articles.html       # Campus Magazine articles
-├── assets/
-│   ├── css/            # main.css (theme) + custom-portfolio.css (overrides)
-│   ├── js/
-│   ├── sass/
-│   └── webfonts/
-├── images/             # Project and site imagery
+├── index.html      # The whole site: About, Projects, CV and Writing views
+├── img/            # Project tiles and writing covers (cropped to 16:10 and 1:1)
 ├── files/
 │   └── Cheryl_DataAnalyst_CV_2026.pdf
-├── LICENSE.txt
+├── cv.html         # Redirects to index.html#cv (keeps old links working)
+├── articles.html   # Redirects to index.html#writing
+├── indexpg2.html   # Redirects to index.html#projects
 └── README.md
 ```
 
-The HTML pages stay at the repository root: GitHub Pages serves `index.html` from there, and
-keeping the others alongside it avoids rewriting every relative path in the theme.
+Plain HTML, CSS and a little JavaScript. No framework, no build step. Projects, CV roles and
+career chapters are arrays near the bottom of `index.html`, so adding one is a single entry.
 
 ## Running locally
 
@@ -93,15 +76,10 @@ cd cheryltky.github.io
 python3 -m http.server 8000
 ```
 
-Then open <http://localhost:8000>. Use a local server rather than opening `index.html`
-directly, so the embedded CV PDF loads correctly.
+Then open <http://localhost:8000>.
 
 ## Contact
 
 [LinkedIn](https://www.linkedin.com/in/cheryltky/) ·
 [Tableau Public](https://public.tableau.com/profile/cheryltky) ·
 [Portfolio](https://cheryltky.github.io)
-
-<div align="center">
-<sub>Built with <a href="https://html5up.net">HTML5 UP</a> (Massively), CCA 3.0 licensed.</sub>
-</div>

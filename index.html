@@ -1,168 +1,507 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
-	<head>
-		<title>Cheryl Tan | Data Analytics Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Data analytics portfolio of Cheryl Tan, blending analytics and machine learning across SQL, Python, Tableau and Power BI." />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="assets/css/custom-portfolio.css" />
-	</head>
-	<body class="is-preload">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cheryl Tan | Senior Data and Insights Analyst</title>
+<meta name="description" content="Cheryl Tan, Senior Data and Insights Analyst in Australia and Singapore: lifecycle marketing analytics, predictive modelling and dashboards.">
+<style>html { color-scheme: light } body { margin: 0 } img { max-width: 100% } [hidden] { display: none !important }</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<style>
+/* Layout: tracked-caps masthead over four hash-routed views. About leads with name and role, Projects is an image gallery, CV is impact-led, Writing is circles. Deep-water palette with one coral accent. */
+:root {
+  --bg: #f3f9f9; --surface: #ffffff; --ink: #0b2a3a; --muted: #547483; --line: #d3e4e6; --accent: #0a8792; --tile: #e1f0f1; --coral: #e2604a;
+  --abyss-a: #0d2233; --abyss-b: #17455e; --abyss-c: #1c5856; --glow-coral: rgba(240, 128, 110, .30); --glow-teal: rgba(86, 208, 214, .22); --glow-word: #f58d7c; --teal-word: #6fd3d8;
+  --deep-a: #0a2a3b; --deep-b: #0e6170; --sea-b: #a34a3c; --on-deep: #ffffff; --on-deep-soft: rgba(255, 255, 255, .76); --deep-chip: rgba(255, 255, 255, .12);
+  --scrim: rgba(6, 24, 33, .8); --on-img: #ffffff; --on-img-soft: rgba(255, 255, 255, .78); --disc-shade: rgba(6, 24, 33, .3);
+  --sans: "Manrope", "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+  --r: 16px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #061a24; --surface: #0c2733; --ink: #e3f1f3; --muted: #8cafba; --line: #173947; --accent: #52cfd6; --tile: #0e2c39; --coral: #ff9079;
+  --deep-a: #0c3041; --deep-b: #0f6a79; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #061a24; --surface: #0c2733; --ink: #e3f1f3; --muted: #8cafba; --line: #173947; --accent: #52cfd6; --tile: #0e2c39; --coral: #ff9079;
+  --deep-a: #0c3041; --deep-b: #0f6a79; color-scheme: dark }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--sans) }
+a { color: inherit }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px }
+h1, h2, h3, p { margin: 0 }
+ul { margin: 0; padding: 0; list-style: none }
+.wrap { max-width: 1200px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+.caps { font-size: 12px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase }
+.eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted) }
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>My Portfolio</h1>
-						<p>A showcase of my data-driven projects and abilities</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg) }
+header.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: var(--bg) }
+header.bar .wrap { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px 32px; padding-block: 22px 18px }
+.brand { font-size: 22px; font-weight: 300; letter-spacing: .22em; text-transform: uppercase; text-decoration: none }
+nav { display: flex; flex-wrap: wrap; gap: 6px 26px }
+nav a { text-decoration: none; color: var(--muted); padding-bottom: 4px; border-bottom: 2px solid transparent }
+nav a:hover { color: var(--ink) }
+nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--accent) }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Cheryl</a>
-					</header>
+main { padding-block: 10px 72px }
+section.view { display: flex; flex-direction: column; gap: 22px }
+.sub { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px }
+.sub h1, .sub h2 { font-size: 13px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--muted) }
+.btns { display: flex; flex-wrap: wrap; gap: 10px }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: 999px; border: 1px solid var(--ink); text-decoration: none; font-weight: 600; font-size: 14px }
+.btn.solid { background: var(--ink); color: var(--bg) }
+.btn:hover { border-color: var(--accent); color: var(--accent) } .btn.solid:hover { background: var(--accent); border-color: var(--accent); color: var(--bg) }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-							<li><a href="cv.html">CV</a></li>
-							<li><a href="articles.html">Articles</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/cheryltky/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://public.tableau.com/profile/cheryltky" class="icon solid fa-chart-bar"><span class="label">Tableau</span></a></li>
-							<li><a href="https://github.com/cheryltky/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+.filters { display: flex; flex-wrap: wrap; gap: 8px }
+.filters button { display: inline-flex; align-items: center; gap: 8px; font: 500 13px var(--sans); background: none; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor: pointer }
+.filters button i { font-style: normal; font-size: 11px; font-variant-numeric: tabular-nums; min-width: 22px; padding: 1px 6px; margin-right: -6px; border-radius: 999px; background: var(--tile); color: var(--muted) }
+.filters button:hover { color: var(--ink); border-color: var(--muted) }
+.filters button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink) }
 
-				<!-- Main -->
-					<div id="main">
+/* About */
+.block { display: flex; flex-direction: column; gap: 22px }
+.block > h2 { font-size: clamp(22px, 3vw, 30px); font-weight: 300; text-wrap: balance }
+.block > h2 b { font-weight: 600 }
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2>Cheryl Tan</h2>
-									<p>A collection of projects using SQL, Python, Excel, Tableau and Power BI.</p>
-									<p>Blending data analytics and machine learning to empower communities
-									and individuals to make data-driven decisions.</p>
-								</header>
-								<a href="https://nudibranch-id.streamlit.app" class="image main"><img src="images/corals.jpg" alt="Coral reef community underwater" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/cheryltky/nudibranch-id" class="button large">2025 Project: Nudibranch Species ID App</a></li>
-								</ul>
-							</article>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<h3><a href="https://github.com/cheryltky/TwitterSentimentAnalysis/blob/main/%20COVID19%20Sentiment%20Analysis%20.ipynb">COVID-19 Twitter Sentiment Analysis</a></h3>
-									</header>
-									<a href="https://github.com/cheryltky/TwitterSentimentAnalysis/blob/main/%20COVID19%20Sentiment%20Analysis%20.ipynb" class="image fit"><img src="images/covidsentiment.jpg" alt="Social media sentiment analysis visualisation" /></a>
-									<p>Determine people's sentiment about COVID-19 based on hashtags and keywords from tweets using the live streamed Twitter API.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/cheryltky/TwitterSentimentAnalysis/blob/main/%20COVID19%20Sentiment%20Analysis%20.ipynb" class="button">Code and Visuals</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h3><a href="https://public.tableau.com/profile/cheryltky#!/vizhome/Covid-19Dashboard_16184790425750/Dashboard1">COVID-19 Dashboard</a></h3>
-									</header>
-									<a href="https://public.tableau.com/profile/cheryltky#!/vizhome/Covid-19Dashboard_16184790425750/Dashboard1" class="image fit"><img src="images/covid19.jpg" alt="COVID-19 case tracking dashboard" /></a>
-									<p>Tools: Tableau, Python. Using web APIs to retrieve live COVID-19 case counts and deaths, with the potential to expand into a decision-making tool for clinicians.</p>
-									<ul class="actions special">
-										<li><a href="https://public.tableau.com/profile/cheryltky#!/vizhome/Covid-19Dashboard_16184790425750/Dashboard1" class="button">Dashboard</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h3><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/cheryltky/bikeshare_studies/main/README.html">US BikeShare Companies</a></h3>
-									</header>
-									<a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/cheryltky/bikeshare_studies/main/README.html" class="image fit"><img src="images/bikeshare.jpg" alt="Row of shared bicycles at a docking station" /></a>
-									<p>US bikeshare data extracted from PostgreSQL with visualisations in Python, addressing questions on customer trends.</p>
-									<ul class="actions special">
-										<li><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/cheryltky/bikeshare_studies/main/README.html" class="button">Code and Visuals</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h3><a href="https://public.tableau.com/profile/cheryltky#!/vizhome/OptimisingCityofMelbournesParkingSpaces/Dashboard1">City of Melbourne: Parking Bays</a></h3>
-									</header>
-									<a href="https://public.tableau.com/profile/cheryltky#!/vizhome/OptimisingCityofMelbournesParkingSpaces/Dashboard1" class="image fit"><img src="images/melbournecity.jpg" alt="Aerial view of Melbourne city streets" /></a>
-									<p>Recommendations to Melbourne City Council for the removal of under-utilised parking bays to maximise green space.</p>
-									<ul class="actions special">
-										<li><a href="https://public.tableau.com/profile/cheryltky#!/vizhome/OptimisingCityofMelbournesParkingSpaces/Dashboard1" class="button">Dashboard</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h3><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/cheryltky/Image_Classification/master/README.html">Deploy an Image Classification Model with PyTorch</a></h3>
-									</header>
-									<a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/cheryltky/Image_Classification/master/README.html" class="image fit"><img src="images/imageclassification.jpg" alt="Image classification model output" /></a>
-									<p>Tools: Python, Flask, PyTorch. An image classifier trained and deployed as a web application.</p>
-									<ul class="actions special">
-										<li><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/cheryltky/Image_Classification/master/README.html" class="button">Code and Visuals</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h3><a href="https://github.com/cheryltky/market_basket_analysis/blob/main/Market%20Basket%20Analysis%20.ipynb">Market Basket Analysis</a></h3>
-									</header>
-									<a href="https://github.com/cheryltky/market_basket_analysis/blob/main/Market%20Basket%20Analysis%20.ipynb" class="image fit"><img src="images/airbnb.jpg" alt="Retail products arranged on shelves" /></a>
-									<p>Tools: Python, machine learning (apriori, association rules). Optimising cross-selling strategies through association-rule mining.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/cheryltky/market_basket_analysis/blob/main/Market%20Basket%20Analysis%20.ipynb" class="button">Code and Visuals</a></li>
-									</ul>
-								</article>
-							</section>
 
-						<!-- Pagination -->
-							<footer>
-								<div class="pagination">
-									<a href="index.html" class="page active">1</a>
-									<a href="indexpg2.html" class="page">2</a>
-									<a href="indexpg2.html" class="next">Next</a>
-								</div>
-							</footer>
+/* Projects */
+.gallery { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px }
+.tile { grid-column: span 2; position: relative; display: block; height: 270px; border-radius: var(--r); overflow: hidden; background: var(--tile); text-decoration: none }
+.tile.wide { grid-column: span 3; height: 340px }
+.tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease }
+.tile:hover img { transform: scale(1.04) }
+.tile::after { content: ""; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, var(--scrim)); pointer-events: none }
+.cap { position: absolute; left: 20px; right: 20px; bottom: 16px; z-index: 1; display: flex; flex-direction: column; gap: 4px; color: var(--on-img) }
+.cap b { font-size: 19px; font-weight: 600; line-height: 1.25; text-wrap: balance }
+.tile.wide .cap b { font-size: 23px }
+.cap span { font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--on-img-soft) }
+.cap small { font-size: 13.5px; line-height: 1.4; color: var(--on-img-soft); max-height: 0; opacity: 0; overflow: hidden; transition: max-height .3s ease, opacity .3s ease }
+.tile:hover .cap small, .tile:focus-visible .cap small { max-height: 4em; opacity: 1 }
+.gallery.filtered .tile, .gallery.filtered .tile.wide { grid-column: span 2; height: 270px }
+.gallery.filtered .tile.wide .cap b { font-size: 19px }
 
-					</div>
+/* Writing */
+.orbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 36px 28px; padding-bottom: 20px }
+.orbs.big { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)) }
+.orb { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 3px; text-decoration: none; min-width: 0 }
+.disc { position: relative; width: 100%; max-width: 210px; aspect-ratio: 1; border-radius: 50%; overflow: hidden; background: var(--tile); margin-bottom: 12px; display: grid; place-items: center; transition: box-shadow .25s ease }
+.orbs.big .disc { max-width: 260px }
+.disc img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease }
+.disc em { position: relative; z-index: 1; font-style: normal; font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--on-img); padding: 0 18px }
+.disc.word::after { content: ""; position: absolute; inset: 0; background: var(--disc-shade) }
+.orb:hover .disc { box-shadow: 0 0 0 5px var(--bg), 0 0 0 7px var(--accent) }
+.orb:hover .disc img { transform: scale(1.06) }
+.orb b { font-size: 16px; font-weight: 600; line-height: 1.3; text-wrap: balance }
+.orb > span { font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted) }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section class="split contact">
-							<section class="alt">
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/cheryltky/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://public.tableau.com/profile/cheryltky" class="icon solid alt fa-chart-bar"><span class="label">Tableau</span></a></li>
-									<li><a href="https://github.com/cheryltky/" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+/* CV */
+.cv { display: flex; flex-direction: column; gap: 36px }
+.cv-hero { background: var(--tile); border-radius: 24px; padding: clamp(22px, 4vw, 44px); display: flex; flex-direction: column; gap: 28px }
+.cv-id { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 18px 32px }
+.cv-id h1 { font-size: clamp(32px, 5vw, 50px); font-weight: 300; letter-spacing: .03em; line-height: 1.05 }
+.cv-id p { margin-top: 10px; max-width: 56ch }
+.cv-id p b { font-weight: 600 }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px }
+.stats li { background: var(--surface); border-radius: var(--r); padding: 16px 18px; display: flex; flex-direction: column; gap: 2px }
+.stats b { font-size: clamp(24px, 3.4vw, 34px); font-weight: 600; line-height: 1.1; color: var(--accent); font-variant-numeric: tabular-nums }
+.stats span { font-size: 13.5px; color: var(--muted) }
+.cv-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 290px); gap: 40px 56px }
+.cv h2 { font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted) }
+.timeline { border-left: 2px solid var(--line); margin-left: 6px; padding-left: 30px; display: flex; flex-direction: column; gap: 32px }
+.role { position: relative; display: flex; flex-direction: column; gap: 2px; min-width: 0 }
+.role::before { content: ""; position: absolute; left: -38px; top: 5px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 2px solid var(--muted) }
+.role.now::before { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 5px var(--tile) }
+.role.sea::before { border-color: var(--coral) }
+.role time { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent) }
+.role.sea time { color: var(--coral) }
+.role h3 { font-size: 19px; font-weight: 600; line-height: 1.3 }
+.role .org { color: var(--muted); font-size: 14.5px }
+.role .sum { font-size: 15px; margin-top: 6px; max-width: 62ch }
+.wins { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; max-width: 62ch }
+.wins li { padding-left: 16px; position: relative; color: var(--muted) }
+.wins li::before { content: ""; position: absolute; left: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent) }
+.wins li b { color: var(--ink); font-weight: 600 }
+.wins li i { display: none }
+/* One headline result per role, the rest behind a disclosure */
+.headline { margin-top: 12px; max-width: 62ch; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 18px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 18px; align-items: center; font-size: 14.5px; color: var(--muted) }
+.headline i { font-style: normal; font-size: 24px; font-weight: 600; line-height: 1.15; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap }
+.headline b { color: var(--ink); font-weight: 600 }
+.more { margin-top: 10px; max-width: 62ch }
+.more summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--accent); list-style: none; display: inline-flex; align-items: center; gap: 6px; padding: 4px 0 }
+.more summary::-webkit-details-marker { display: none }
+.more summary::after { content: "+"; font-size: 16px; line-height: 1 }
+.more[open] summary::after { content: "\2212" }
+.more .wins { margin-top: 6px }
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Cheryl Tan 2026</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+.side { display: flex; flex-direction: column; gap: 34px; min-width: 0 }
+.side h2 { margin-bottom: 14px }
+.pills { display: flex; flex-wrap: wrap; gap: 6px }
+.pills li { font-size: 13px; padding: 4px 12px; border-radius: 999px; background: var(--tile) }
+.edu { display: flex; flex-direction: column; gap: 10px }
+.edu li { border: 1px solid var(--line); background: var(--surface); border-radius: var(--r); padding: 14px 16px; display: flex; flex-direction: column; gap: 1px }
+.edu b { font-weight: 600; font-size: 15px; line-height: 1.35 } .edu span { color: var(--muted); font-size: 13.5px }
 
-			</div>
+footer .wrap { border-top: 1px solid var(--line); padding-block: 22px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; color: var(--muted) }
+footer a { text-decoration: none } footer a:hover { color: var(--accent) }
+footer div { display: flex; gap: 22px }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+.picks .tile, .picks .tile.wide { height: 260px }
+#view-about { gap: 44px }
+.reef { position: relative; overflow: hidden; border-radius: 28px; isolation: isolate; padding: clamp(28px, 4vw, 48px) clamp(22px, 4.5vw, 56px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 56px; align-items: center; color: var(--h-ink); background: var(--h-bg); border: 1px solid var(--h-line) }
+.reef .eyebrow { color: var(--h-soft) }
+.reef h1 { font-size: clamp(46px, 7.4vw, 92px); font-weight: 600; letter-spacing: -.035em; line-height: .98; margin-top: 12px }
+.reef .loc { margin-top: 16px; font-size: 14px; font-weight: 500; color: var(--h-soft) }
+.reef h2 { font-size: clamp(24px, 3vw, 36px); font-weight: 300; line-height: 1.15; text-wrap: balance }
+.reef h2 i { font-style: normal; color: var(--h-i) } .reef h2 b { font-weight: 600; color: var(--h-b) }
+.reef p { color: var(--h-soft); margin-top: 12px; max-width: 44ch }
+.reef .btns { margin-top: 20px }
+.reef .btn { border-color: var(--h-soft); color: var(--h-ink) }
+.reef .btn.solid { background: var(--h-ink); border-color: var(--h-ink); color: var(--h-on) }
+.reef .btn:hover { border-color: var(--h-b); color: var(--h-b) }
+.reef .btn.solid:hover { background: var(--h-b); border-color: var(--h-b); color: var(--h-on) }
+.reef[data-style="deep"] { --h-ink: var(--on-deep); --h-soft: var(--on-deep-soft); --h-i: var(--teal-word); --h-b: var(--glow-word); --h-on: var(--abyss-a); --h-line: transparent;
+  --h-bg: radial-gradient(60% 90% at 4% 100%, var(--glow-coral), transparent 70%), radial-gradient(50% 80% at 98% 15%, var(--glow-teal), transparent 70%), linear-gradient(120deg, var(--abyss-a), var(--abyss-b) 55%, var(--abyss-c)) }
+@media (max-width: 900px) { .reef { grid-template-columns: minmax(0, 1fr) } }
+.caps3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px }
+.caps3 li { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 6px }
+.caps3 svg { width: 38px; height: 38px; margin-bottom: 8px }
+.caps3 svg * { fill: none; stroke: var(--accent); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round }
+.caps3 svg .hl { stroke: var(--coral) }
+.caps3 b { font-size: 19px; font-weight: 600; line-height: 1.25 }
+.caps3 span { color: var(--muted); font-size: 15px }
+.caps3 small { margin-top: 8px; font-size: 12px; font-weight: 500; letter-spacing: .04em; color: var(--accent) }
+.rowhead { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 20px }
+.rowhead a { font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none } .rowhead a:hover { text-decoration: underline }
+.talk { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; padding-block: 12px 4px }
+.talk h2 { font-size: clamp(24px, 3.4vw, 34px); font-weight: 300 } .talk h2 b { font-weight: 600 }
+.talk .btns { justify-content: center }
+@media (max-width: 900px) { .caps3 { grid-template-columns: minmax(0, 1fr) } }
+/* Career story: six chapters, one on screen, all six named in the tab strip */
+.story { background: linear-gradient(135deg, var(--deep-a), var(--deep-b)); color: var(--on-deep); border-radius: 24px; padding: clamp(20px, 3.5vw, 36px); display: flex; flex-direction: column; gap: 26px; transition: background .4s ease }
+.story[data-kind="sea"] { background: linear-gradient(135deg, var(--deep-a), var(--sea-b)) }
+.story-tabs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px }
+.story-tabs button { background: none; border: 0; padding: 0; cursor: pointer; text-align: left; color: var(--on-deep-soft); font: 600 11px var(--sans); letter-spacing: .1em; text-transform: uppercase; display: flex; flex-direction: column; gap: 8px; min-width: 0 }
+.story-tabs button i { display: block; height: 4px; border-radius: 4px; background: var(--deep-chip) }
+.story-tabs button.seen i, .story-tabs button[aria-pressed="true"] i { background: var(--on-deep) }
+.story-tabs button[aria-pressed="true"] { color: var(--on-deep) }
+.story-tabs button:focus-visible, .story-nav button:focus-visible { outline-color: var(--on-deep) }
+.story-card { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 16px 32px; align-items: center; min-height: 170px }
+.story-card.swap { animation: rise .35s ease both }
+@keyframes rise { from { opacity: 0; transform: translateY(10px) } to { opacity: 1; transform: none } }
+.story-card .eyebrow { color: var(--on-deep-soft) }
+.story-card h3 { font-size: clamp(22px, 3vw, 32px); font-weight: 600; line-height: 1.2; margin-top: 8px; text-wrap: balance }
+.story-card p { color: var(--on-deep-soft); margin-top: 8px; max-width: 44ch }
+.story-card strong { font-size: clamp(44px, 8vw, 104px); font-weight: 300; line-height: 1; letter-spacing: -.02em; text-align: right; overflow-wrap: anywhere }
+.story-card strong.phrase { font-size: clamp(28px, 4.4vw, 54px); font-weight: 300; line-height: 1.1; letter-spacing: -.01em; text-wrap: balance; overflow-wrap: normal }
+.story-link { display: inline-block; margin-top: 14px; font-size: 14px; font-weight: 600; color: var(--on-deep); text-underline-offset: 4px }
+.story-link:not([href]) { color: var(--on-deep-soft); text-decoration: none; font-weight: 500 }
+.story-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 13px; color: var(--on-deep-soft); font-variant-numeric: tabular-nums }
+.story-nav button { font: 600 13px var(--sans); color: var(--on-deep); background: none; border: 1px solid var(--on-deep-soft); border-radius: 999px; padding: 8px 18px; cursor: pointer }
+.story-nav button:hover { background: var(--on-deep); color: var(--deep-a) }
+.story-nav button:disabled { opacity: .35; cursor: default; background: none; color: var(--on-deep) }
+@media (max-width: 700px) { .story-tabs button span { display: none } .story-card { grid-template-columns: minmax(0, 1fr) } .story-card strong { text-align: left; order: -1 } }
+@media (prefers-reduced-motion: reduce) { .story-card.swap { animation: none } .story { transition: none } }
 
-	</body>
+@media (prefers-reduced-motion: reduce) { .tile img, .disc img, .disc { transition: none } .tile:hover img, .orb:hover .disc img { transform: none } }
+@media (max-width: 900px) {
+  .tile, .tile.wide, .gallery.filtered .tile { grid-column: span 3; height: 240px }
+  .cv-body { grid-template-columns: minmax(0, 1fr) }
+}
+@media (max-width: 560px) { .tile, .tile.wide, .gallery.filtered .tile { grid-column: 1 / -1; height: 220px } .brand { font-size: 18px } .stats { grid-template-columns: minmax(0, 1fr) } .orbs, .orbs.big { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px } }
+</style>
+</head>
+<body>
+
+<header class="bar"><div class="wrap">
+  <a class="brand" href="#about">Cheryl Tan</a>
+  <nav class="caps" aria-label="Sections">
+    <a href="#about" data-tab="about">About</a>
+    <a href="#projects" data-tab="projects">Projects</a>
+    <a href="#cv" data-tab="cv">CV</a>
+    <a href="#writing" data-tab="writing">Writing</a>
+    <a href="https://github.com/cheryltky/">GitHub</a>
+    <a href="https://www.linkedin.com/in/cheryltky/">LinkedIn</a>
+  </nav>
+</div></header>
+
+<main><div class="wrap">
+
+<section class="view" id="view-about">
+  <div class="reef" id="hero" data-style="deep">
+    <div>
+      <span class="eyebrow">Senior Data and Insights Analyst</span>
+      <h1>Cheryl Tan</h1>
+      <div class="loc">Australia · Singapore</div>
+    </div>
+    <div>
+      <h2>I turn <i>customer behaviour</i> into <b>decisions.</b></h2>
+      <p>Lifecycle marketing analytics, predictive modelling and dashboards people actually use.</p>
+      <div class="btns">
+        <a class="btn solid" href="#projects">See my work</a>
+        <a class="btn" href="#cv">View CV</a>
+      </div>
+    </div>
+  </div>
+
+  <ul class="caps3">
+    <li>
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M33 20a13 13 0 1 1-4-9.4"/><path class="hl" d="M30 4v7h-7"/><circle cx="20" cy="20" r="3.5"/></svg>
+      <b>Customer behaviour</b><span>Who comes back, who drops off, and why. Lifecycle, retention and segmentation analytics.</span><small>SQL · Python · Snowflake · dbt</small></li>
+    <li>
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 31l9-9 6 5 7-10"/><path class="hl" d="M27 17l8-9" stroke-dasharray="1 5"/><path d="M5 35h30"/></svg>
+      <b>Predictive modelling</b><span>Models that score customers and forecast outcomes, evaluated honestly.</span><small>scikit-learn · XGBoost · PyTorch</small></li>
+    <li>
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="6" width="30" height="28" rx="4"/><path d="M5 14h30"/><path class="hl" d="M12 28v-5M19 28v-9M26 28v-6"/></svg>
+      <b>Dashboards people use</b><span>Clear, good-looking reporting built on tested data, with AI agents for the follow-up questions.</span><small>Sigma · Tableau · Looker · Power BI</small></li>
+  </ul>
+
+  <div class="block">
+    <div class="rowhead"><span class="eyebrow">Selected work</span><a href="#projects">All projects &rarr;</a></div>
+    <div class="gallery picks" id="picks"></div>
+  </div>
+
+  <div class="block">
+    <span class="eyebrow">Where I am now, and how I got here</span>
+    <div class="story" id="story" data-kind="data">
+      <div class="story-tabs" id="story-tabs" role="group" aria-label="Career chapters"></div>
+      <div class="story-card" id="story-card" aria-live="polite">
+        <div>
+          <span class="eyebrow" id="st-when"></span>
+          <h3 id="st-title"></h3>
+          <p id="st-text"></p>
+          <a id="st-link" class="story-link" hidden></a>
+        </div>
+        <strong id="st-big"></strong>
+      </div>
+      <div class="story-nav">
+        <button type="button" id="st-prev">&larr; Back</button>
+        <span id="st-count"></span>
+        <button type="button" id="st-next">Next &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="talk">
+    <h2>Have a data problem? <b>Let's talk.</b></h2>
+    <div class="btns">
+      <a class="btn solid" href="https://www.linkedin.com/in/cheryltky/">Message me on LinkedIn</a>
+      <a class="btn" href="files/Cheryl_DataAnalyst_CV_2026.pdf">Download CV</a>
+      <a class="btn" href="https://github.com/cheryltky/">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="view-projects" hidden>
+  <div class="sub">
+    <h1>Data analytics · Machine learning · Analytics engineering</h1>
+    <div class="filters" id="filters" role="group" aria-label="Filter projects">
+      <button type="button" id="f-all" data-f="all" aria-pressed="true">All</button>
+      <button type="button" id="f-ml" data-f="ml" aria-pressed="false">Machine learning</button>
+      <button type="button" id="f-bi" data-f="bi" aria-pressed="false">Analytics</button>
+      <button type="button" id="f-app" data-f="app" aria-pressed="false">Data apps</button>
+    </div>
+  </div>
+  <div class="gallery" id="gallery"></div>
+</section>
+
+<section class="view" id="view-cv" hidden>
+  <div class="cv">
+    <div class="cv-hero">
+      <div class="cv-id">
+        <div>
+          <h1>Cheryl Tan</h1>
+          <p><b>Senior Data and Insights Analyst with a geneticist's rigour</b>, bringing six years of marketing, customer and lifecycle analytics. I turn complex data into dashboards, predictive models and AI agents that leaders act on.</p>
+        </div>
+        <div class="btns">
+          <a class="btn solid" href="files/Cheryl_DataAnalyst_CV_2026.pdf">Download CV (PDF) &darr;</a>
+          <a class="btn" href="https://www.linkedin.com/in/cheryltky/">LinkedIn</a>
+        </div>
+      </div>
+      <ul class="stats">
+        <li><b>6 years</b><span>in data, after an early career in marine genetics</span></li>
+        <li><b>5+ industries</b><span>food, aesthetics, automotive, insurance and gaming</span></li>
+        <li><b>3 disciplines</b><span>analytics, data engineering and AI</span></li>
+      </ul>
+    </div>
+
+    <div class="cv-body">
+      <div>
+        <div class="cv-bar">
+          <h2>Experience</h2>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+
+      <aside class="side">
+        <div>
+          <h2>Toolkit</h2>
+          <ul class="pills"><li>SQL</li><li>Python</li><li>dbt</li><li>Snowflake</li><li>Sigma</li><li>Tableau</li><li>Looker</li><li>Streamlit</li></ul>
+        </div>
+        <div>
+          <h2>Education</h2>
+          <ul class="edu">
+            <li><b>BSc Marine Science, Honours in Genetics</b><span>The University of Queensland</span></li>
+            <li><b>Certificate in Data Analytics</b><span>General Assembly · Government scholarship</span></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="view-writing" hidden>
+  <div class="sub"><h2>Research</h2></div>
+  <div class="orbs big">
+    <a class="orb" href="https://drive.google.com/file/d/1T3T8LjjOwd3_S1gvJHXSW3BcGajDfQEa/view?usp=sharing"><span class="disc"><img src="img/c_prawn.jpg" alt="" loading="lazy"></span><b>Viral transmission in prawns</b><span>Aquaculture genetics</span></a>
+    <a class="orb" href="https://www.gbri.org.au/SpeciesList/Pseudobicerosbedfordi%7CKayYinTan.aspx?PageContentID=3856"><span class="disc"><img src="img/c_carpetflatworm.jpg" alt="" loading="lazy"></span><b>Invertebrates of the Coral Sea</b><span>Heron Island</span></a>
+  </div>
+  <div class="sub"><h2>Articles</h2></div>
+  <div class="orbs">
+    <a class="orb" href="https://www.campus.sg/solution-to-pollution-microplastics/"><span class="disc word"><img src="img/c_pic04.jpg" alt="" loading="lazy"><em>Microplastics</em></span><b>Solution to pollution</b><span>Environment</span></a>
+    <a class="orb" href="https://www.campus.sg/how-sustainable-is-singapore-campus-sg/"><span class="disc word"><img src="img/c_pic02.jpg" alt="" loading="lazy"><em>Sustainability</em></span><b>Sustainability in Singapore</b><span>Environment</span></a>
+    <a class="orb" href="https://www.campus.sg/adventure-therapy-as-a-tool-for-youths-at-risk-campus-sg/"><span class="disc word"><img src="img/c_pic01.jpg" alt="" loading="lazy"><em>Outdoors</em></span><b>Adventure therapy</b><span>Youth</span></a>
+    <a class="orb" href="https://www.campus.sg/singapore-first-world-country-with-third-world-citizens-campus-sg/"><span class="disc word"><img src="img/c_pic03.jpg" alt="" loading="lazy"><em>Civic life</em></span><b>Singapore: how do you rate us?</b><span>Society</span></a>
+    <a class="orb" href="https://www.campus.sg/wp-content/uploads/2021/05/Issue71.pdf"><span class="disc word"><img src="img/c_pic05.jpg" alt="" loading="lazy"><em>Bitcoin</em></span><b>The Bitcoin bug</b><span>Finance</span></a>
+    <a class="orb" href="https://www.campus.sg/ancient-treasures-from-the-tang-dynasty/"><span class="disc word"><img src="img/c_pic12.jpg" alt="" loading="lazy"><em>Tang dynasty</em></span><b>Ancient treasures</b><span>History</span></a>
+  </div>
+</section>
+
+</div></main>
+
+<footer><div class="wrap caps"><span>Cheryl Tan · Australia · Singapore</span><div><a href="https://github.com/cheryltky/">GitHub</a><a href="https://www.linkedin.com/in/cheryltky/">LinkedIn</a><a href="https://public.tableau.com/profile/cheryltky">Tableau</a></div></div></footer>
+
+<script>
+const GH = 'https://github.com/cheryltky/';
+const TB = 'https://public.tableau.com/profile/cheryltky#!/vizhome/';
+const projects = [
+  { c: 'ml', wide: 1, t: 'Nudibranch species identification', k: 'Computer vision · Live app', img: 'nudibranch', u: GH + 'nudibranch-id' },
+  { c: 'ml', wide: 1, t: 'Skin lesion classification', k: 'Computer vision · Healthcare', img: 'skin', u: GH + 'skin-lesion-id' },
+  { c: 'app', t: 'Coral reef health monitor', k: 'Data pipeline · Dashboard', img: 'corals', u: GH + 'coral-reef-monitoring-app' },
+  { c: 'bi', t: 'US bikeshare feasibility', k: 'SQL · R', img: 'bikeshare', u: GH + 'bikeshare_studies' },
+  { c: 'bi', t: 'Melbourne parking bays', k: 'Tableau · Urban planning', img: 'melbournecity', u: TB + 'OptimisingCityofMelbournesParkingSpaces/Dashboard1' },
+  { c: 'ml', t: 'Customer segmentation', k: 'Clustering · Marketing', img: 'segmentation', u: GH + 'ML-for-Customer-Market-Segmentations' },
+  { c: 'ml', t: 'Cervical cancer risk prediction', k: 'XGBoost · Healthcare', img: 'cervical', u: GH + 'cervicalcancerriskprediction' },
+  { c: 'ml', t: 'Market basket analysis', k: 'Association rules · Retail', img: 'basket', u: GH + 'market_basket_analysis' },
+  { c: 'bi', wide: 1, t: 'COVID-19 case dashboard', k: 'Tableau · Public health', img: 'covid19', u: TB + 'Covid-19Dashboard_16184790425750/Dashboard1' },
+  { c: 'ml', wide: 1, t: 'COVID-19 Twitter sentiment', k: 'NLP · Social data', img: 'sentiment', u: GH + 'TwitterSentimentAnalysis' }
+];
+const outcomes = {
+  nudibranch: 'Calibration error cut from 0.146 to 0.022.', skin: '0.92 top-3 accuracy on HAM10000.',
+  corals: 'Pipeline to Postgres to live dashboard.', bikeshare: 'Seven business questions answered in SQL.',
+  melbournecity: 'Which parking bays could become green space.', segmentation: 'Customer groups found with PCA and k-means.',
+  cervical: 'Risk predicted from patient history.', basket: 'Products bought together, for cross-selling.',
+  covid19: 'Live case counts from web APIs.', sentiment: 'Public mood tracked from streamed tweets.'
+};
+const tile = (p, wide) => `<a class="tile${wide ? ' wide' : ''}" data-c="${p.c}" href="${p.u}"><img src="img/${p.img}.jpg" alt="" loading="lazy"><span class="cap"><b>${p.t}</b><span>${p.k}</span><small>${outcomes[p.img]}</small></span></a>`;
+const gallery = document.getElementById('gallery');
+gallery.innerHTML = projects.map(p => tile(p, p.wide)).join('');
+
+document.getElementById('picks').innerHTML = ['basket', 'nudibranch'].map(k => tile(projects.find(p => p.img === k), 1)).join('');
+document.querySelectorAll('#filters button').forEach(b => {
+  const n = b.dataset.f === 'all' ? projects.length : projects.filter(p => p.c === b.dataset.f).length;
+  b.insertAdjacentHTML('beforeend', `<i>${n}</i>`);
+});
+document.getElementById('filters').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  document.querySelectorAll('#filters button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  gallery.classList.toggle('filtered', b.dataset.f !== 'all');
+  gallery.querySelectorAll('.tile').forEach(t => { t.hidden = b.dataset.f !== 'all' && t.dataset.c !== b.dataset.f; });
+});
+
+// Each win: [headline figure or keyword, the result, how it was achieved]
+const roles = [
+  { cls: 'now', time: '2023 to now', title: 'Insights and Analytics Analyst', org: 'Jumbo Interactive',
+    sum: 'Analytics partner to the Growth, Marketing, Operations and SaaS teams, covering reporting, data modelling and AI.',
+    wins: [
+      ['AI agents', 'Streamlined KPI reporting across several businesses', 'by building AI agents inside Sigma performance reports.'],
+      ['ROAS', 'Gave Growth and Marketing one view of channel performance', 'with cost attribution dashboards.'],
+      ['dbt', 'Made reporting data more reliable', 'by building dbt pipelines on Snowflake with CI/CD checks.'],
+      ['VIP', 'Identified high-value customer segments and retention opportunities', 'from lifecycle metrics such as active customer growth.'],
+      ['YTD', 'Sped up executive reporting', 'by improving year-to-date financial performance dashboards used by business leaders.']
+    ] },
+  { time: '2021 to 2023', title: 'Data Analyst', org: 'Customology',
+    sum: 'Analytics for lifecycle marketing programmes run for brands including Bridgestone, Laser Clinics Australia, Silk Laser Clinics, Soul Origin and Youfoodz.',
+    wins: [
+      ['5+ brands', 'Delivered campaign reporting for franchise brands across food, aesthetics and automotive', 'learning each client\'s customers and commercial goals so every dashboard answered their questions.'],
+      ['Repeat demand', 'Earned a growing stream of insight requests from client stakeholders', 'as campaign reporting became part of how they planned.'],
+      ['SQL', 'Targeted large campaign sends', 'with SQL audience selection based on engagement scores and customer lifetime value.'],
+      ['KPIs', 'Gave campaign managers clear performance tracking', 'with KPI and campaign dashboards in Tableau.']
+    ] },
+  { time: '2021', title: 'Business Intelligence Analyst', org: 'Youi Insurance',
+    sum: 'Dashboards and management reporting for the data analytics team, using Tableau, Power BI and SQL.',
+    wins: [
+      ['3 metrics', 'Benchmarked revenue, staff wellbeing and customer satisfaction', 'in Gold Standard Reporting dashboards built with key stakeholders.'],
+      ['MIS', 'Kept business-as-usual reporting accurate', 'by updating MIS reports and SQL stored procedures.']
+    ] },
+  { time: '2020 to 2021', title: 'Technical Database Officer', org: 'COVID-19 Critical Care Consortium, The University of Queensland',
+    sum: 'Data quality for a global study of intensive care patients.',
+    wins: [
+      ['ICU data', 'Prepared global ICU patient data for journal publication', 'by cleaning and quality-checking clinical records.'],
+      ['Clinicians', 'Resolved missing and incorrect patient data', 'working with doctors and biostatisticians before analysis.']
+    ] },
+  { time: '2020', title: 'AI Engineer Intern', org: 'Blackbook.ai',
+    sum: 'Automation and Python tooling for a consultancy.',
+    wins: [
+      ['RPA', 'Automated yearly client reporting', 'with UiPath robotic process automation.'],
+      ['PyPI', 'Built a Python resource library for internal staff', 'published as packages on PyPI.']
+    ] },
+  { cls: 'sea', time: 'Early career', title: 'Marine Biologist', org: 'CSIRO',
+    sum: 'Molecular genetics research on marine and aquaculture animals.',
+    wins: [
+      ['Genetics', 'Researched virus transmission in farmed prawns', 'to inform aquaculture breeding programmes.'],
+      ['Lab', 'Hands-on molecular methods', 'including PCR, DNA sequencing and microsatellite typing.']
+    ] }
+];
+const timeline = document.getElementById('timeline');
+timeline.innerHTML = roles.map(r => `<div class="role ${r.cls || ''}"><time>${r.time}</time><h3>${r.title}</h3><p class="org">${r.org}</p>
+  ${r.sum ? `<p class="sum">${r.sum}</p>` : ''}
+  <div class="headline"><i>${r.wins[0][0]}</i><span><b>${r.wins[0][1]}</b> ${r.wins[0][2]}</span></div>
+  ${r.wins.length > 1 ? `<details class="more"><summary>${r.wins.length - 1} more result${r.wins.length > 2 ? 's' : ''}</summary><ul class="wins">${r.wins.slice(1).map(w => `<li><b>${w[1]}</b> ${w[2]}</li>`).join('')}</ul></details>` : ''}</div>`).join('');
+
+const chapters = [
+  { kind: 'data', tab: 'Now', when: '2023 to now', big: 'AI agents embedded in dashboards', title: 'Data and insights at Jumbo Interactive', text: 'I build the data models, the dashboards and the AI agents inside them, so leaders can ask a follow-up question and get an answer.' },
+  { kind: 'data', tab: 'Marketing', when: '2021', big: '5+ brands', title: 'Lifecycle marketing analytics', text: 'Campaign analytics for Bridgestone, Laser Clinics Australia, Youfoodz and more.' },
+  { kind: 'data', tab: 'Health data', when: '2020', big: 'ICU', title: 'The pivot to data', text: 'Patient data for a global COVID-19 study.' },
+  { kind: 'sea', tab: 'CSIRO', when: 'Science', big: 'Virus transmission in prawns', title: 'Marine biologist, CSIRO', text: 'Published research on how gill-associated virus spreads in farmed prawns.', link: ['Read the paper', 'https://drive.google.com/file/d/1T3T8LjjOwd3_S1gvJHXSW3BcGajDfQEa/view?usp=sharing'] },
+  { kind: 'sea', tab: 'Genetics', when: 'Science', big: 'Pathogen sequence typing', title: 'Marine science, honours in genetics', text: 'Developed a sequence typing scheme to tell apart strains of a bacterium that infects fish.', link: ['Read the thesis', ''] },
+  { kind: 'sea', tab: 'Biotech', when: 'Science', big: 'Microsatellite genotyping', title: 'Molecular biotechnology', text: 'Genotyped Queensland redclaw crayfish at the lab bench, learning how biological data is made before it is analysed.' }
+];
+const story = document.getElementById('story'), storyCard = document.getElementById('story-card');
+document.getElementById('story-tabs').innerHTML = chapters.map((c, i) => `<button type="button" id="st-tab-${i}" data-i="${i}"><i></i><span>${c.tab}</span></button>`).join('');
+let chapter = 0;
+function showChapter(i) {
+  chapter = Math.max(0, Math.min(chapters.length - 1, i));
+  const c = chapters[chapter];
+  story.dataset.kind = c.kind;
+  document.getElementById('st-when').textContent = c.when;
+  document.getElementById('st-title').textContent = c.title;
+  document.getElementById('st-text').textContent = c.text;
+  const big = document.getElementById('st-big');
+  big.textContent = c.big; big.classList.toggle('phrase', c.big.length > 10);
+  const link = document.getElementById('st-link');
+  link.hidden = !c.link;
+  if (c.link) { link.textContent = c.link[1] ? c.link[0] + ' \u2192' : c.link[0] + ' (link coming soon)'; if (c.link[1]) link.href = c.link[1]; else link.removeAttribute('href'); }
+  document.getElementById('st-count').textContent = `${chapter + 1} / ${chapters.length}`;
+  document.getElementById('st-prev').disabled = chapter === 0;
+  document.getElementById('st-next').disabled = chapter === chapters.length - 1;
+  document.querySelectorAll('#story-tabs button').forEach((b, n) => { b.setAttribute('aria-pressed', n === chapter); b.classList.toggle('seen', n < chapter); });
+  storyCard.classList.remove('swap'); void storyCard.offsetWidth; storyCard.classList.add('swap');
+}
+document.getElementById('story-tabs').addEventListener('click', e => { const b = e.target.closest('button'); if (b) showChapter(+b.dataset.i); });
+document.getElementById('st-prev').addEventListener('click', () => showChapter(chapter - 1));
+document.getElementById('st-next').addEventListener('click', () => showChapter(chapter + 1));
+story.addEventListener('keydown', e => { if (e.key === 'ArrowRight') showChapter(chapter + 1); if (e.key === 'ArrowLeft') showChapter(chapter - 1); });
+showChapter(0);
+
+function route() {
+  const tabs = ['about', 'projects', 'cv', 'writing'];
+  const tab = tabs.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'about';
+  document.querySelectorAll('section.view').forEach(s => { s.hidden = s.id !== 'view-' + tab; });
+  document.querySelectorAll('nav a[data-tab]').forEach(a => a.dataset.tab === tab ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
+  window.scrollTo(0, 0);
+}
+addEventListener('hashchange', route); route();
+</script>
+</body>
 </html>
