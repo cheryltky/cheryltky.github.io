@@ -390,7 +390,7 @@ const outcomes = {
   nudibranch: 'Calibration error cut from 0.146 to 0.022.', skin: '0.92 top-3 accuracy on HAM10000.',
   corals: 'Pipeline to Postgres to live dashboard.', bikeshare: 'Seven business questions answered in SQL.',
   melbournecity: 'Which parking bays could become green space.', segmentation: 'Customer groups found with PCA and k-means.',
-  cervical: 'Risk predicted from patient history.', basket: 'Products bought together, for cross-selling.',
+  cervical: 'Flags who needs a biopsy, 0.85 recall.', basket: 'Products bought together, for cross-selling.',
   covid19: 'Live case counts from web APIs.', sentiment: 'Public mood tracked from streamed tweets.'
 };
 const tile = (p, wide) => `<a class="tile${wide ? ' wide' : ''}" data-c="${p.c}" href="${p.u}"><img src="img/${p.img}.jpg" alt="" loading="lazy"><span class="cap"><b>${p.t}</b><span>${p.k}</span><small>${outcomes[p.img]}</small></span></a>`;
