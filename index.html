@@ -395,16 +395,18 @@ const TB = 'https://public.tableau.com/profile/cheryltky#!/vizhome/';
 const projects = [
   { c: 'ml', wide: 1, t: 'Nudibranch species identification', k: 'Computer vision · Live app', img: 'nudibranch', u: GH + 'nudibranch-id' },
   { c: 'ml', wide: 1, t: 'Skin lesion classification', k: 'Computer vision · Healthcare', img: 'skin', u: GH + 'skin-lesion-id' },
+  { c: 'app', t: 'Real-world SPF simulator', k: 'Monte Carlo · Public health', img: 'spf', u: 'real-world-spf/' },
   { c: 'app', t: 'Coral reef health monitor', k: 'Data pipeline · Dashboard', img: 'corals', u: GH + 'coral-reef-monitoring-app' },
   { c: 'bi', t: 'US bikeshare feasibility', k: 'SQL · R', img: 'bikeshare', u: GH + 'bikeshare_studies' },
   { c: 'bi', t: 'Melbourne parking bays', k: 'Tableau · Urban planning', img: 'melbournecity', u: TB + 'OptimisingCityofMelbournesParkingSpaces/Dashboard1' },
   { c: 'ml', t: 'Customer segmentation', k: 'Clustering · Marketing', img: 'segmentation', u: GH + 'ML-for-Customer-Market-Segmentations' },
   { c: 'ml', t: 'Cervical cancer risk prediction', k: 'XGBoost · Healthcare', img: 'cervical', u: GH + 'cervicalcancerriskprediction' },
   { c: 'ml', t: 'Market basket analysis', k: 'Association rules · Retail', img: 'basket', u: GH + 'market_basket_analysis' },
-  { c: 'bi', wide: 1, t: 'COVID-19 case dashboard', k: 'Tableau · Public health', img: 'covid19', u: TB + 'Covid-19Dashboard_16184790425750/Dashboard1' },
-  { c: 'ml', wide: 1, t: 'COVID-19 Twitter sentiment', k: 'NLP · Social data', img: 'sentiment', u: GH + 'TwitterSentimentAnalysis' }
+  { c: 'bi', t: 'COVID-19 case dashboard', k: 'Tableau · Public health', img: 'covid19', u: TB + 'Covid-19Dashboard_16184790425750/Dashboard1' },
+  { c: 'ml', t: 'COVID-19 Twitter sentiment', k: 'NLP · Social data', img: 'sentiment', u: GH + 'TwitterSentimentAnalysis' }
 ];
 const outcomes = {
+  spf: 'SPF 50, thinly applied, acts like SPF 3 to 13.',
   nudibranch: 'Calibration error cut from 0.146 to 0.022.', skin: '0.92 top-3 accuracy on HAM10000.',
   corals: 'Pipeline to Postgres to live dashboard.', bikeshare: 'Seven business questions answered in SQL.',
   melbournecity: 'Which parking bays could become green space.', segmentation: 'Customer groups found with PCA and k-means.',
